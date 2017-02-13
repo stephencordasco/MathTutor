@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_practice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.stephencordasco.mathtutor.Practice"
+    android:background="@drawable/mathborder">
+
+    <TextView
+        android:text="@string/practiceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:id="@+id/practiceTitle"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_orange_dark" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginBottom="88dp"
+        android:id="@+id/editText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/practiceTitle"
+        android:layout_alignStart="@+id/practiceTitle"
+        android:hint="@string/enter_number_hint" />
+
+    <TextView
+        android:text="@string/answerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answerTextView"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_toLeftOf="@+id/editText"
+        android:layout_toStartOf="@+id/editText"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp" />
+
+    <Button
+        android:text="@string/check_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="calculate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/answerTextView"
+        android:layout_alignStart="@+id/answerTextView"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/checkBtn"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:background="@android:color/holo_blue_bright" />
+
+    <Button
+        android:text="@string/home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/practiceTitle"
+        android:layout_alignRight="@+id/answerTextView"
+        android:layout_alignEnd="@+id/answerTextView"
+        android:id="@+id/homeBtn"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="@string/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/addSignTextView"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:layout_below="@+id/numTextView1"
+        android:layout_alignLeft="@+id/practiceTitle"
+        android:layout_alignStart="@+id/practiceTitle" />
+
+    <TextView
+        android:text="@string/equals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/equalsTextView"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:layout_alignTop="@+id/addSignTextView"
+        android:layout_alignRight="@+id/practiceTitle"
+        android:layout_alignEnd="@+id/practiceTitle"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:text="@string/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numTextView2"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:layout_alignBaseline="@+id/addSignTextView"
+        android:layout_alignBottom="@+id/addSignTextView"
+        android:layout_alignRight="@+id/equalsTextView"
+        android:layout_alignEnd="@+id/equalsTextView"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <TextView
+        android:text="@string/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:id="@+id/numTextView1"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:layout_below="@+id/practiceTitle"
+        android:layout_alignLeft="@+id/numTextView2"
+        android:layout_alignStart="@+id/numTextView2" />
+
+    <Button
+        android:text="@string/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="generate"
+        android:id="@+id/begin_button"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/checkBtn"
+        android:layout_alignBottom="@+id/checkBtn"
+        android:layout_toRightOf="@+id/equalsTextView"
+        android:layout_toEndOf="@+id/equalsTextView" />
+
+</RelativeLayout>
