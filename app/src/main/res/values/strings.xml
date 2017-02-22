@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Math Tutor</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_to_the_math_tutor">Welcome to the Math Tutor!</string>
+    <string name="practice">Practice</string>
+    <string name="test">Test</string>
+    <string name="quit">Quit</string>
+    <string name="practiceTextView">Practice</string>
+    <string name="answerTextView">Answer</string>
+    <string name="enter_number_hint">Enter Number</string>
+    <string name="check_btn">Check</string>
+    <string name="next_btn">Next</string>
+    <string name="home_btn">Home</string>
+    <string name="plus">+</string>
+    <string name="num1">0</string>
+    <string name="num2">0</string>
+    <string name="equals">________</string>
+    <string name="begin">Begin</string>
+    <string name="generate">Generate</string>
+    <string name="test_text_view">Test</string>
+    <string name="home_button">Home</string>
+    <string name="checkedtextview">CheckedTextView</string>
+    <string name="begin_practice">Begin</string>
+    <string name="select_math_type">Select Math Type</string>
+    <string name="select_difficulty">Select Difficulty</string>
+    <string name="begin_prac_btn">Begin</string>
+    <string-array name="math_types">
+        <item>Addition</item>
+        <item>Subtraction</item>
+    </string-array>
+    <string-array name="difficulty_types">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+    </string-array>
+</resources>

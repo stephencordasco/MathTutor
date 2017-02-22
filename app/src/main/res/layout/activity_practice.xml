@@ -60,7 +60,8 @@
         android:id="@+id/checkBtn"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="18sp"
-        android:background="@android:color/holo_blue_bright" />
+        android:background="@android:color/holo_blue_bright"
+        android:fontFamily="casual" />
 
     <Button
         android:text="@string/home_btn"
@@ -72,7 +73,8 @@
         android:id="@+id/homeBtn"
         android:background="@android:color/holo_blue_bright"
         android:textColor="@android:color/holo_orange_dark"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:fontFamily="casual" />
 
     <TextView
         android:text="@string/plus"
@@ -136,6 +138,7 @@
         android:layout_alignBaseline="@+id/checkBtn"
         android:layout_alignBottom="@+id/checkBtn"
         android:layout_toRightOf="@+id/equalsTextView"
-        android:layout_toEndOf="@+id/equalsTextView" />
+        android:layout_toEndOf="@+id/equalsTextView"
+        android:fontFamily="casual" />
 
 </RelativeLayout>

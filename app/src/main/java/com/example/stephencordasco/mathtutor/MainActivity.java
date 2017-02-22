@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         prac_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentPrac = new Intent(MainActivity.this, Practice.class);
+                Intent intentPrac = new Intent(MainActivity.this, PracticeSetUpActivity.class);
                 startActivity(intentPrac);
             }
         });

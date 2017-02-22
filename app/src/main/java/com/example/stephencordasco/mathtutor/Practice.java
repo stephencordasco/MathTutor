@@ -10,7 +10,6 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class Practice extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,17 +53,18 @@ public class Practice extends AppCompatActivity {
     public void calculate(View view) {
         int total = number1 + number2;
 
-        Button checkButton = (Button) findViewById(R.id.checkBtn);
+        Button chk_btn = (Button) findViewById(R.id.checkBtn);
         EditText checkText = (EditText) findViewById(R.id.editText);
         int userAnswer = Integer.parseInt(checkText.getText().toString());
 
         if (total == userAnswer)
         {
+            chk_btn.setText("Correct!");
             generate(view);
         }
         else
         {
-            checkButton.setText("Incorrect.");
+            chk_btn.setText("Incorrect.");
         }
     }
 }
