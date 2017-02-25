@@ -1,17 +1,18 @@
 package com.example.stephencordasco.mathtutor;
 
 import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.content.Intent;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class PracticeSetUpActivity extends AppCompatActivity {
 
+    // References to the spinners and adapters
     Spinner mathSpinner;
     Spinner diffSpinner;
     ArrayAdapter<CharSequence> mathAdapter;
@@ -59,6 +60,12 @@ public class PracticeSetUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Intent to begin the practice activity
                 Intent beginIntent = new Intent(PracticeSetUpActivity.this, Practice.class);
+
+                // Send the selected spinner data to the next activity
+                beginIntent.putExtra("SpinnerValue", mathSpinner.getSelectedItem().toString());
+                beginIntent.putExtra("SpinnerValue2", diffSpinner.getSelectedItem().toString());
+
+                // Start the activity
                 startActivity(beginIntent);
             }
         });

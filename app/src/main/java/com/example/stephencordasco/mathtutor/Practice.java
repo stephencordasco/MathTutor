@@ -10,10 +10,25 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class Practice extends AppCompatActivity {
+
+    // References to Strings storing data passed from previous activity
+    String math_selection;
+    String diff_selection;
+
+    // Reference to EditText
+    EditText checkText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_practice);
+
+        // Receive the string names that are passed from the spinners in PracticeSetUpActivity
+        Bundle extras = getIntent().getExtras();
+        Bundle extras2 = getIntent().getExtras();
+        // Store the data in the String
+        math_selection = extras.getString("SpinnerValue");
+        diff_selection = extras2.getString("SpinnerValue2");
 
         // Set the listener and Intent for the Home button
         Button home = (Button) findViewById(R.id.homeBtn);
@@ -34,37 +49,41 @@ public class Practice extends AppCompatActivity {
     // Method for the Generate button: generates random numbers
     public void generate(View view) {
         Random rand = new Random();
-        number1 = rand.nextInt(9) + 1;
-        number2 = rand.nextInt(10);
 
-        TextView firstNumText = (TextView) findViewById(R.id.numTextView1);
+        // Conditions based off the difficulty selection by the user
+        if (diff_selection.equals("Beginner")) {
+            number1 = rand.nextInt(9) + 1;
+            number2 = rand.nextInt(10);
+        }
+        else if (diff_selection.equals("Intermediate")) {
+            number1 = rand.nextInt(50) + 1;
+            number2 = rand.nextInt(51);
+        }
+        else {
+            number1 = rand.nextInt(100) + 1;
+            number2 = rand.nextInt(101);
+        }
+
+        // For the equation
+        TextView firstNumText = (TextView) findViewById(R.id.firstDigitTextView);
         String firstNumStr = String.valueOf(number1);
         firstNumText.setText(firstNumStr);
 
-        TextView secondNumText = (TextView) findViewById(R.id.numTextView2);
+        TextView secondNumText = (TextView) findViewById(R.id.secondDigitTextView);
         String secondNumStr = String.valueOf(number2);
         secondNumText.setText(secondNumStr);
-
-        Button checkButton = (Button) findViewById(R.id.checkBtn);
-        checkButton.setText("Check");
     }
 
     // Method for the Check button: checks if the user entered the correct answer or not
     public void calculate(View view) {
         int total = number1 + number2;
 
-        Button chk_btn = (Button) findViewById(R.id.checkBtn);
-        EditText checkText = (EditText) findViewById(R.id.editText);
+        checkText = (EditText) findViewById(R.id.editText);
         int userAnswer = Integer.parseInt(checkText.getText().toString());
 
         if (total == userAnswer)
         {
-            chk_btn.setText("Correct!");
             generate(view);
-        }
-        else
-        {
-            chk_btn.setText("Incorrect.");
         }
     }
 }

@@ -17,21 +17,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/practiceTitle"
         android:textSize="30sp"
-        android:textColor="@android:color/holo_orange_dark" />
+        android:textColor="@android:color/holo_orange_dark"
+        android:fontFamily="casual" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="90dp"
         android:id="@+id/editText"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/practiceTitle"
-        android:layout_alignStart="@+id/practiceTitle"
+        android:layout_alignParentEnd="true"
         android:hint="@string/enter_number_hint" />
 
     <TextView
@@ -45,18 +46,21 @@
         android:layout_alignBottom="@+id/editText"
         android:layout_toLeftOf="@+id/editText"
         android:layout_toStartOf="@+id/editText"
-        android:layout_marginRight="23dp"
-        android:layout_marginEnd="23dp" />
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="casual" />
 
     <Button
         android:text="@string/check_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="calculate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/answerTextView"
-        android:layout_alignStart="@+id/answerTextView"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
         android:id="@+id/checkBtn"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="18sp"
@@ -67,26 +71,16 @@
         android:text="@string/home_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/practiceTitle"
-        android:layout_alignRight="@+id/answerTextView"
-        android:layout_alignEnd="@+id/answerTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/homeBtn"
         android:background="@android:color/holo_blue_bright"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="18sp"
         android:fontFamily="casual" />
-
-    <TextView
-        android:text="@string/plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:id="@+id/addSignTextView"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:layout_below="@+id/numTextView1"
-        android:layout_alignLeft="@+id/practiceTitle"
-        android:layout_alignStart="@+id/practiceTitle" />
 
     <TextView
         android:text="@string/equals"
@@ -95,50 +89,59 @@
         android:id="@+id/equalsTextView"
         android:textColor="@android:color/black"
         android:textSize="30sp"
-        android:layout_alignTop="@+id/addSignTextView"
-        android:layout_alignRight="@+id/practiceTitle"
-        android:layout_alignEnd="@+id/practiceTitle"
-        android:layout_marginTop="13dp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="200dp"/>
 
     <TextView
         android:text="@string/num1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numTextView2"
+        android:id="@+id/secondDigitTextView"
         android:textColor="@android:color/black"
         android:textSize="30sp"
-        android:layout_alignBaseline="@+id/addSignTextView"
-        android:layout_alignBottom="@+id/addSignTextView"
-        android:layout_alignRight="@+id/equalsTextView"
-        android:layout_alignEnd="@+id/equalsTextView"
-        android:layout_marginRight="30dp"
-        android:layout_marginEnd="30dp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="185dp" />
 
     <TextView
         android:text="@string/num2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:id="@+id/numTextView1"
+        android:id="@+id/firstDigitTextView"
         android:textColor="@android:color/black"
         android:textSize="30sp"
-        android:layout_below="@+id/practiceTitle"
-        android:layout_alignLeft="@+id/numTextView2"
-        android:layout_alignStart="@+id/numTextView2" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="120dp" />
 
     <Button
         android:text="@string/generate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="generate"
-        android:id="@+id/begin_button"
+        android:id="@+id/gen_btn"
         android:background="@android:color/holo_blue_bright"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="18sp"
-        android:layout_alignBaseline="@+id/checkBtn"
-        android:layout_alignBottom="@+id/checkBtn"
-        android:layout_toRightOf="@+id/equalsTextView"
-        android:layout_toEndOf="@+id/equalsTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:fontFamily="casual" />
+
+    <TextView
+        android:text="@string/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mathTypeTextView"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:layout_alignBaseline="@+id/secondDigitTextView"
+        android:layout_alignBottom="@+id/secondDigitTextView"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
 
 </RelativeLayout>
